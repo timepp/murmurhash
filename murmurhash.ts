@@ -64,7 +64,7 @@ function fmix32(k: bigint): bigint {
  * @param seed 
  * @returns the hash value as a BigInt
  */
-export function murmurHash3_x64_128(key: string, seed: number = 0) {
+export function murmurHash3_x64_128(key: string, seed: number = 0) : bigint{
     let h1 = BigInt(seed);
     let h2 = BigInt(seed);
 
@@ -132,7 +132,7 @@ export function murmurHash3_x64_128(key: string, seed: number = 0) {
  * @param seed 
  * @returns the hash value as a BigInt
  */
-export function murmurHash3_x86_128(key: string, seed: number = 0) {
+export function murmurHash3_x86_128(key: string, seed: number = 0): bigint {
     let h1 = BigInt(seed);
     let h2 = BigInt(seed);
     let h3 = BigInt(seed);
@@ -218,7 +218,7 @@ export function murmurHash3_x86_128(key: string, seed: number = 0) {
  * @param seed 
  * @returns the hash value as a BigInt
 */
-export function murmurHash3_x86_32(key: string, seed: number = 0) {
+export function murmurHash3_x86_32(key: string, seed: number = 0): bigint {
     let h1 = BigInt(seed);
 
     const keyBytes = new TextEncoder().encode(key);
