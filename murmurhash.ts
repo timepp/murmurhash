@@ -58,6 +58,12 @@ function fmix32(k: bigint): bigint {
     return k;
 }
 
+/**
+ * Generate murmurhash3 x64 128-bit hash
+ * @param key original data
+ * @param seed 
+ * @returns the hash value as a BigInt
+ */
 export function murmurHash3_x64_128(key: string, seed: number = 0) {
     let h1 = BigInt(seed);
     let h2 = BigInt(seed);
@@ -120,6 +126,12 @@ export function murmurHash3_x64_128(key: string, seed: number = 0) {
     return h1 << 64n | h2;
 }
 
+/**
+ * Generate murmurhash3 x86 128-bit hash
+ * @param key original data
+ * @param seed 
+ * @returns the hash value as a BigInt
+ */
 export function murmurHash3_x86_128(key: string, seed: number = 0) {
     let h1 = BigInt(seed);
     let h2 = BigInt(seed);
@@ -200,6 +212,12 @@ export function murmurHash3_x86_128(key: string, seed: number = 0) {
     return h1 << 96n | h2 << 64n | h3 << 32n | h4;
 }
 
+/** 
+ * Generate murmurhash3 x86 32-bit hash
+ * @param key original data
+ * @param seed 
+ * @returns the hash value as a BigInt
+*/
 export function murmurHash3_x86_32(key: string, seed: number = 0) {
     let h1 = BigInt(seed);
 
